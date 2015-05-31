@@ -31,4 +31,13 @@
     <string name="nazwa_menu">Menu</string>
     <string name="przycisk_zdjecia">Zrób zdjęcie</string>
     <string name="title_activity_zdjecie">Zdjecie</string>
+    <string name="title_activity_pomoc">Pomoc</string>
+
+    <string-array name="tutajpomusz">
+        <item>Pomocy nie ma</item>
+        <item>Bo i po co</item>
+        <item>Hahahhahahahah</item>
+        <item>Umrzyj!</item>
+    </string-array>
+
 </resources>
