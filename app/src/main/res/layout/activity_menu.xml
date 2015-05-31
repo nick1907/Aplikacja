@@ -1,0 +1,44 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center"
+    tools:context="destroyer.friendzone.com.fzdestroyer.MenuActivity"
+    android:background="@drawable/gradient">
+
+    <TableRow>
+        <ImageButton
+            android:layout_width="170sp"
+            android:layout_height="170sp"
+            android:text="@string/czat"
+            android:id="@+id/przycisk_czatu"
+            android:background="@drawable/czat"/>
+        <ImageButton
+            android:id="@+id/przycisk_ustawien"
+            android:layout_width="170sp"
+            android:layout_height="170sp"
+            android:text="@string/ustawienia"
+            android:background="@drawable/ustawienia_aplikacji" />
+    </TableRow>
+    <TableRow>
+        <ImageButton
+            android:layout_width="170sp"
+            android:layout_height="170sp"
+            android:text="@string/pomoc"
+            android:id="@+id/przycisk_pomocy"
+            android:background="@drawable/help"
+            android:visibility="invisible" />
+        <ImageButton
+            android:layout_width="170sp"
+            android:layout_height="170sp"
+            android:text="@string/info"
+            android:id="@+id/przycisk_info"
+            android:background="@drawable/info"
+            android:visibility="invisible" />
+    </TableRow>
+
+</TableLayout>

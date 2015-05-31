@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="destroyer.friendzone.com.fzdestroyer.Ustawienia"
+    android:background="@drawable/gradient">
+
+    <!-- pole na opis o uzytkowniku -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opis"
+        android:id="@+id/opis_tekst" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovalborder"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        android:id="@+id/pole_opisu"
+        android:layout_below="@+id/opis_tekst"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- wybor orientacji seksualnej -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orientacja"
+        android:id="@+id/orientacja_tekst"
+        android:layout_below="@+id/pole_opisu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wybor_orientacji"
+        android:layout_below="@+id/orientacja_tekst"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- wybor daty urodzenia jesli jej nie podano -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/data_urodzenia_tekst"
+        android:text="@string/data_urodzenia"
+        android:layout_below="@+id/wybor_orientacji" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wybor_dnia"
+        android:layout_below="@+id/data_urodzenia_tekst" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/wybor_dnia"
+        android:layout_toEndOf="@+id/wybor_dnia"
+        android:id="@+id/wybor_miesiaca"
+        android:layout_below="@+id/data_urodzenia_tekst" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/wybor_miesiaca"
+        android:layout_toEndOf="@+id/wybor_miesiaca"
+        android:layout_below="@+id/data_urodzenia_tekst"
+        android:id="@+id/wybor_roku" />
+
+    <!-- pole na pobranie zasiegu w jakim szukamy drugiej "polowki" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wybor_dnia"
+        android:id="@+id/zasieg_tekst"
+        android:text="@string/zasieg" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovalborder"
+        android:inputType="numberDecimal"
+        android:id="@+id/pole_zasiegu"
+        android:layout_below="@+id/zasieg_tekst"
+        android:layout_alignRight="@+id/wybor_miesiaca"
+        android:layout_alignEnd="@+id/wybor_miesiaca" />
+
+    <!-- pole na miejscowosc uzytkownika programu -->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/miejscowosc_tekst"
+        android:text="@string/miejscowosc"
+        android:layout_below="@+id/pole_zasiegu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovalborder"
+        android:id="@+id/miejscowosc_pole"
+        android:inputType="textAutoCorrect|textAutoComplete"
+        android:layout_below="@+id/miejscowosc_tekst"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- przycisk do zatwierdzenia zmian odpowiednich pol profilu -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zapisz_zmiany"
+        android:id="@+id/zapisz_zmiany"
+        android:onClick="zaaktualizujDane"
+        android:layout_below="@+id/miejscowosc_pole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <!-- przycisk do robienia zdjecia profilowego -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zrob_zdjecie"
+        android:onClick="zrobZdjecie"
+        android:layout_below="@+id/zapisz_zmiany"
+        android:layout_centerInParent="true"
+        android:text="@string/przycisk_zdjecia" />
+</RelativeLayout>

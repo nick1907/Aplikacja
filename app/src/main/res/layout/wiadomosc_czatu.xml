@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- zdjecie i wiadomosc od naszego rozmowcy (wyrownane do lewej strony) -->
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/zdjecie_rozmowcy"
+        android:visibility="visible" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wiadomosc_rozmowcy"
+        android:layout_toEndOf="@+id/zdjecie_rozmowcy"
+        android:layout_toRightOf="@+id/zdjecie_rozmowcy"
+        android:visibility="visible" />
+
+    <!-- zdjecie i nasza wiadomosc wyrownane do prawej strony -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nasze_zdjecie"
+        android:layout_toLeftOf="@+id/nasza_wiadomosc"
+        android:layout_toStartOf="@+id/nasza_wiadomosc"
+        android:visibility="visible" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nasza_wiadomosc"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

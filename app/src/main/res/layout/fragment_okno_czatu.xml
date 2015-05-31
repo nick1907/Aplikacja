@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="destroyer.friendzone.com.fzdestroyer.OknoCzatu"
+    android:background="@drawable/gradient">
+
+    <!-- obszar rozmowy (czatu) -->
+    <ListView
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rozmowa"
+        android:focusable="false"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/obrazek_akceptacji"
+        android:layout_toEndOf="@+id/obrazek_akceptacji"
+        android:layout_toLeftOf="@+id/obrazek_odrzucenia"
+        android:layout_toStartOf="@+id/obrazek_odrzucenia">
+    </ListView>
+
+    <!-- przycisk akceptacji znajomosci -->
+    <ImageButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/obrazek_akceptacji"
+        android:background="@drawable/tak"
+        android:layout_marginTop="130sp"/>
+
+    <!-- przycisk odrzucenia znajomosci -->
+    <ImageButton
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:id="@+id/obrazek_odrzucenia"
+        android:background="@drawable/nie"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130sp"/>
+
+    <!-- tekst do wpisania nowej wiadomosci -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rozmowa"
+        android:inputType="text"
+        android:id="@+id/nowa_wiadomosc" />
+
+
+    <!-- przycisk wyslania nowej wiadomosci -->
+    <ImageButton
+        android:src="@drawable/przycisk_wyslania_scr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/przycisk_wyslania_wiadomosci"
+        android:layout_below="@+id/rozmowa"
+        android:layout_toRightOf="@+id/nowa_wiadomosc"
+        android:layout_toEndOf="@+id/nowa_wiadomosc" />
+
+</RelativeLayout>

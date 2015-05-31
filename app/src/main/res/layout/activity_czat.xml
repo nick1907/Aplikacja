@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="destroyer.friendzone.com.fzdestroyer.Czat"
+    android:background="@drawable/gradient">
+
+    <!-- fragment odpowiadajacy za wyswietlanie paska z wiadomosciami itp. -->
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/okno_czatu_fragment"
+        android:tag="tag_okna_czatu"
+        android:name="destroyer.friendzone.com.fzdestroyer.OknoCzatu" />
+
+</RelativeLayout>
